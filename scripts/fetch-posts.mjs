@@ -8,7 +8,23 @@ const MEDIUM_FEEDS = ["https://xylomining.medium.com/feed", "https://medium.com/
 const decode = (s) => s.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
 const noDash = (s) => s.replace(/\s\u2014\s/g, ": ").replace(/\u2014/g, "-");
 
-async function youtube() {
+async function youtubeApi(key) {
+  const uploads = "UU" + YT_CHANNEL.slice(2);
+  const list = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&playlistId=${uploads}&key=${key}`);
+  if (!list.ok) throw new Error(`YouTube API playlist ${list.status}`);
+  const ids = ((await list.json()).items ?? []).map((i) => i.contentDetails.videoId);
+  if (!ids.length) return [];
+  const vids = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${ids.join(",")}&key=${key}`);
+  if (!vids.ok) throw new Error(`YouTube API videos ${vids.status}`);
+  return ((await vids.json()).items ?? []).map((v) => ({
+    id: `yt-${v.id}`, platform: "YouTube", title: noDash(v.snippet.title),
+    url: `https://www.youtube.com/watch?v=${v.id}`, date: v.snippet.publishedAt,
+    thumbnail: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+    views: Number(v.statistics?.viewCount ?? 0), likes: Number(v.statistics?.likeCount ?? 0), comments: Number(v.statistics?.commentCount ?? 0),
+  }));
+}
+
+async function youtubeRss() {
   const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${YT_CHANNEL}`, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`YouTube feed ${res.status}`);
   const xml = await res.text();
@@ -25,6 +41,16 @@ async function youtube() {
       likes: Number(e.match(/<media:starRating count="(\d+)"/)?.[1] ?? 0),
     };
   });
+}
+
+async function youtube() {
+  try {
+    return await youtubeRss();
+  } catch (e) {
+    if (!process.env.YOUTUBE_API_KEY) throw e;
+    console.warn("YouTube RSS failed, using the Data API:", e.message);
+    return youtubeApi(process.env.YOUTUBE_API_KEY);
+  }
 }
 
 async function reddit() {
@@ -75,6 +101,10 @@ const posts = results
 // Keep the previous file if every source failed, so a blocked request never wipes the feed.
 if (posts.length) writeFileSync("posts.json", JSON.stringify(posts, null, 2) + "\n");
 console.log(`posts: ${posts.length}`);
+if (!posts.length) {
+  console.error("No posts fetched from any source. Check the warnings above.");
+  process.exitCode = 1;
+}
 
 // articles.json: keep hand-written fields (like subtitle) from the previous file
 try {
