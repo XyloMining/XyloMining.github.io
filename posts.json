@@ -1,35 +1,32 @@
 [
   {
+    "id": "yt-tanBxFFCCLY",
+    "platform": "YouTube",
+    "title": "How a Bitcoin Block Actually Gets Mined",
+    "url": "https://www.youtube.com/watch?v=tanBxFFCCLY",
+    "date": "2026-10-19T07:01:20+00:00",
+    "thumbnail": "https://i.ytimg.com/vi/tanBxFFCCLY/hqdefault.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
     "id": "yt-_iHfD9oFPlo",
     "platform": "YouTube",
     "title": "GoMining Earnings: My Real 114 TH Dashboard (Not Typical)",
     "url": "https://www.youtube.com/watch?v=_iHfD9oFPlo",
-    "date": "2026-10-19T01:00:46Z",
+    "date": "2026-10-19T01:00:46+00:00",
     "thumbnail": "https://i.ytimg.com/vi/_iHfD9oFPlo/hqdefault.jpg",
     "views": 5,
-    "likes": 0,
-    "comments": 0
+    "likes": 0
   },
   {
     "id": "yt-K42POT_tJn8",
     "platform": "YouTube",
     "title": "Why Bitcoin Mining Difficulty Changes Every 2,016 Blocks #bitcoin #crypto",
     "url": "https://www.youtube.com/watch?v=K42POT_tJn8",
-    "date": "2026-10-17T19:38:13Z",
+    "date": "2026-10-17T19:38:13+00:00",
     "thumbnail": "https://i.ytimg.com/vi/K42POT_tJn8/hqdefault.jpg",
     "views": 20,
-    "likes": 0,
-    "comments": 0
-  },
-  {
-    "id": "yt-rxVRGibWl3I",
-    "platform": "YouTube",
-    "title": "Mine Crypto Without the Rig? GoMining Daily BTC Rewards ⚡ #shorts",
-    "url": "https://www.youtube.com/watch?v=rxVRGibWl3I",
-    "date": "2026-10-15T14:12:17Z",
-    "thumbnail": "https://i.ytimg.com/vi/rxVRGibWl3I/hqdefault.jpg",
-    "views": 9,
-    "likes": 1,
-    "comments": 0
+    "likes": 0
   }
 ]
