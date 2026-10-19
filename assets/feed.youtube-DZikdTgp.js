@@ -1,0 +1,1 @@
+import{b as e}from"./index-B3xbMEYh.js";import{t}from"./PlatformFeed-CD1XMfys.js";var n=e(),r=()=>(0,n.jsx)(t,{platform:`YouTube`});export{r as component};
