@@ -4,29 +4,32 @@
     "platform": "YouTube",
     "title": "How a Bitcoin Block Actually Gets Mined",
     "url": "https://www.youtube.com/watch?v=tanBxFFCCLY",
-    "date": "2026-10-19T07:01:20+00:00",
+    "date": "2026-10-19T07:01:20Z",
     "thumbnail": "https://i.ytimg.com/vi/tanBxFFCCLY/hqdefault.jpg",
     "views": 4,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-_iHfD9oFPlo",
     "platform": "YouTube",
-    "title": "GoMining Earnings: My Real 114 TH Dashboard (Not Typical)",
+    "title": "Is GoMining Worth It? My Real 114 TH Dashboard #BitcoinMining #PassiveIncome #Shorts",
     "url": "https://www.youtube.com/watch?v=_iHfD9oFPlo",
-    "date": "2026-10-19T01:00:46+00:00",
+    "date": "2026-10-19T01:00:46Z",
     "thumbnail": "https://i.ytimg.com/vi/_iHfD9oFPlo/hqdefault.jpg",
-    "views": 19,
-    "likes": 0
+    "views": 24,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-K42POT_tJn8",
     "platform": "YouTube",
     "title": "Why Bitcoin Mining Difficulty Changes Every 2,016 Blocks #bitcoin #crypto",
     "url": "https://www.youtube.com/watch?v=K42POT_tJn8",
-    "date": "2026-10-17T19:38:13+00:00",
+    "date": "2026-10-17T19:38:13Z",
     "thumbnail": "https://i.ytimg.com/vi/K42POT_tJn8/hqdefault.jpg",
-    "views": 25,
-    "likes": 0
+    "views": 26,
+    "likes": 0,
+    "comments": 0
   }
 ]
