@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{t}from"./PlatformFeed-C4JLEeUc.js";var n=e(),r=()=>(0,n.jsx)(t,{platform:`TikTok`});export{r as component};

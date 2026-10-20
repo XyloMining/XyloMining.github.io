@@ -37,3 +37,6 @@ The site source is a TanStack Start and React project in the private repo `XyloM
 ## Disclosure
 
 Referral links on the site may earn Xylo Mining a reward at no cost to you. Nothing here is financial advice. Mining carries risk and results vary.
+
+
+Also: `/guides` (searchable mining guides) and `/calculator` (Bitcoin and GoMining profitability calculator).
