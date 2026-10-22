@@ -4,29 +4,32 @@
     "platform": "YouTube",
     "title": "W/TH Explained: Why Mining Efficiency Matters",
     "url": "https://www.youtube.com/watch?v=ZuFj2TBofoI",
-    "date": "2026-10-21T07:02:00+00:00",
+    "date": "2026-10-21T07:02:00Z",
     "thumbnail": "https://i.ytimg.com/vi/ZuFj2TBofoI/hqdefault.jpg",
-    "views": 52,
-    "likes": 0
+    "views": 53,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-HNvNYpp5HNM",
     "platform": "YouTube",
     "title": "Myth: More Miners = Faster Bitcoin Blocks?",
     "url": "https://www.youtube.com/watch?v=HNvNYpp5HNM",
-    "date": "2026-10-20T07:01:47+00:00",
+    "date": "2026-10-20T07:01:47Z",
     "thumbnail": "https://i.ytimg.com/vi/HNvNYpp5HNM/hqdefault.jpg",
     "views": 0,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-tanBxFFCCLY",
     "platform": "YouTube",
     "title": "How a Bitcoin Block Actually Gets Mined",
     "url": "https://www.youtube.com/watch?v=tanBxFFCCLY",
-    "date": "2026-10-19T07:01:20+00:00",
+    "date": "2026-10-19T07:01:20Z",
     "thumbnail": "https://i.ytimg.com/vi/tanBxFFCCLY/hqdefault.jpg",
     "views": 5,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
   }
 ]
