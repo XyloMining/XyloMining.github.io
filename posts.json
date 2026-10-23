@@ -1,35 +1,32 @@
 [
   {
+    "id": "yt-zOhX5e2rfpo",
+    "platform": "YouTube",
+    "title": "Only 21 Million Bitcoin Will Ever Exist",
+    "url": "https://www.youtube.com/watch?v=zOhX5e2rfpo",
+    "date": "2026-10-23T07:02:02+00:00",
+    "thumbnail": "https://i.ytimg.com/vi/zOhX5e2rfpo/hqdefault.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
     "id": "yt-ue2Ut19CVzc",
     "platform": "YouTube",
     "title": "What Is a GoMining Digital Miner? Explained",
     "url": "https://www.youtube.com/watch?v=ue2Ut19CVzc",
-    "date": "2026-10-22T07:02:09Z",
+    "date": "2026-10-22T07:02:09+00:00",
     "thumbnail": "https://i.ytimg.com/vi/ue2Ut19CVzc/hqdefault.jpg",
     "views": 6,
-    "likes": 0,
-    "comments": 0
+    "likes": 0
   },
   {
     "id": "yt-ZuFj2TBofoI",
     "platform": "YouTube",
     "title": "Why Watts per Terahash matters more than hashrate #Bitcoin #Tech",
     "url": "https://www.youtube.com/watch?v=ZuFj2TBofoI",
-    "date": "2026-10-21T07:02:00Z",
+    "date": "2026-10-21T07:02:00+00:00",
     "thumbnail": "https://i.ytimg.com/vi/ZuFj2TBofoI/hqdefault.jpg",
-    "views": 58,
-    "likes": 0,
-    "comments": 0
-  },
-  {
-    "id": "yt-HNvNYpp5HNM",
-    "platform": "YouTube",
-    "title": "Myth: More Miners = Faster Bitcoin Blocks?",
-    "url": "https://www.youtube.com/watch?v=HNvNYpp5HNM",
-    "date": "2026-10-20T07:01:47Z",
-    "thumbnail": "https://i.ytimg.com/vi/HNvNYpp5HNM/hqdefault.jpg",
-    "views": 0,
-    "likes": 0,
-    "comments": 0
+    "views": 59,
+    "likes": 0
   }
 ]
