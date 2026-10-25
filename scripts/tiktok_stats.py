@@ -54,4 +54,9 @@ if __name__ == "__main__":
     ap.add_argument("--count", type=int, default=30)
     ap.add_argument("--browser", default="chromium")
     a = ap.parse_args()
-    asyncio.run(main(a.handle.lstrip("@"), a.count, a.browser))
+    try:
+        asyncio.run(main(a.handle.lstrip("@"), a.count, a.browser))
+    except Exception as e:  # print a plain reason so the CI log shows why it failed
+        print(f"TIKTOK FETCH FAILED: {type(e).__name__}: {str(e)[:300]}")
+        print("ms_token set:", bool(os.environ.get("ms_token")))
+        raise SystemExit(1)
