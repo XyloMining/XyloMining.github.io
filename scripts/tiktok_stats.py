@@ -19,12 +19,24 @@ from TikTokApi import TikTokApi
 OUT = pathlib.Path(__file__).resolve().parents[1] / "data" / "tiktok_metrics.json"
 
 
+def proxy_settings(url):
+    """Playwright wants username and password as separate fields, not inside the URL."""
+    if not url:
+        return None
+    from urllib.parse import unquote, urlparse
+    u = urlparse(url)
+    out = {"server": f"{u.scheme}://{u.hostname}" + (f":{u.port}" if u.port else "")}
+    if u.username:
+        out["username"], out["password"] = unquote(u.username), unquote(u.password or "")
+    return out
+
+
 async def main(handle: str, count: int, browser: str, headed: bool = False):
     token = os.environ.get("ms_token")
     async with TikTokApi() as api:
-        proxy = os.environ.get("TIKTOK_PROXY")  # optional, e.g. http://user:pass@host:port
+        proxy = proxy_settings(os.environ.get("TIKTOK_PROXY"))  # optional, e.g. http://user:pass@host:port
         await api.create_sessions(ms_tokens=[token] if token else None, num_sessions=1, sleep_after=3, browser=browser,
-                                  headless=not headed, proxies=[{"server": proxy}] if proxy else None)
+                                  headless=not headed, proxies=[proxy] if proxy else None)
         user = api.user(handle)
         info = await user.info()
         if not info.get("userInfo", {}).get("user"):
