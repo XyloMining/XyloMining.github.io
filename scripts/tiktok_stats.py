@@ -27,6 +27,8 @@ async def main(handle: str, count: int, browser: str, headed: bool = False):
                                   headless=not headed, proxies=[{"server": proxy}] if proxy else None)
         user = api.user(handle)
         info = await user.info()
+        if not info.get("userInfo", {}).get("user"):
+            raise RuntimeError("TikTok returned an empty profile (bot check, missing ms_token, or wrong handle)")
         stats = info.get("userInfo", {}).get("stats", {})
         rows = []
         async for v in user.videos(count=count):
