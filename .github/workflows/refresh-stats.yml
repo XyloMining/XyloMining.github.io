@@ -29,10 +29,12 @@ jobs:
         continue-on-error: true
         env:
           ms_token: ${{ secrets.TIKTOK_MS_TOKEN }}
+          TIKTOK_PROXY: ${{ secrets.TIKTOK_PROXY }}
         run: |
           pip install TikTokApi
-          python -m playwright install --with-deps chromium
-          python scripts/tiktok_stats.py xylo_mining --count 30
+          python -m playwright install --with-deps chromium webkit
+          xvfb-run -a python scripts/tiktok_stats.py xylo_mining --count 30 --headed \
+            || xvfb-run -a python scripts/tiktok_stats.py xylo_mining --count 30 --headed --browser webkit
       - name: Build stats.json
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

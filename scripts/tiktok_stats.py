@@ -19,10 +19,12 @@ from TikTokApi import TikTokApi
 OUT = pathlib.Path(__file__).resolve().parents[1] / "data" / "tiktok_metrics.json"
 
 
-async def main(handle: str, count: int, browser: str):
+async def main(handle: str, count: int, browser: str, headed: bool = False):
     token = os.environ.get("ms_token")
     async with TikTokApi() as api:
-        await api.create_sessions(ms_tokens=[token] if token else None, num_sessions=1, sleep_after=3, browser=browser)
+        proxy = os.environ.get("TIKTOK_PROXY")  # optional, e.g. http://user:pass@host:port
+        await api.create_sessions(ms_tokens=[token] if token else None, num_sessions=1, sleep_after=3, browser=browser,
+                                  headless=not headed, proxies=[{"server": proxy}] if proxy else None)
         user = api.user(handle)
         info = await user.info()
         stats = info.get("userInfo", {}).get("stats", {})
@@ -53,9 +55,10 @@ if __name__ == "__main__":
     ap.add_argument("handle")
     ap.add_argument("--count", type=int, default=30)
     ap.add_argument("--browser", default="chromium")
+    ap.add_argument("--headed", action="store_true", help="visible browser (use xvfb-run on a server)")
     a = ap.parse_args()
     try:
-        asyncio.run(main(a.handle.lstrip("@"), a.count, a.browser))
+        asyncio.run(main(a.handle.lstrip("@"), a.count, a.browser, a.headed))
     except Exception as e:  # print a plain reason so the CI log shows why it failed
         print(f"TIKTOK FETCH FAILED: {type(e).__name__}: {str(e)[:300]}")
         print("ms_token set:", bool(os.environ.get("ms_token")))
