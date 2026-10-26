@@ -1,35 +1,32 @@
 [
   {
+    "id": "yt-JteckbP-lgY",
+    "platform": "YouTube",
+    "title": "What Is a Nonce in Bitcoin Mining?",
+    "url": "https://www.youtube.com/watch?v=JteckbP-lgY",
+    "date": "2026-10-26T07:01:36+00:00",
+    "thumbnail": "https://i.ytimg.com/vi/JteckbP-lgY/hqdefault.jpg",
+    "views": 1,
+    "likes": 0
+  },
+  {
     "id": "yt-qiqK_-SUT-4",
     "platform": "YouTube",
     "title": "Bitcoin Mining Recap: Blocks, Hashes and Nodes",
     "url": "https://www.youtube.com/watch?v=qiqK_-SUT-4",
-    "date": "2026-10-25T00:01:11Z",
+    "date": "2026-10-25T00:01:11+00:00",
     "thumbnail": "https://i.ytimg.com/vi/qiqK_-SUT-4/hqdefault.jpg",
     "views": 15,
-    "likes": 0,
-    "comments": 0
+    "likes": 0
   },
   {
     "id": "yt-g5A9VekZDSM",
     "platform": "YouTube",
     "title": "3 Numbers to Check Before Any Bitcoin Mining Decision",
     "url": "https://www.youtube.com/watch?v=g5A9VekZDSM",
-    "date": "2026-10-24T00:01:53Z",
+    "date": "2026-10-24T00:01:53+00:00",
     "thumbnail": "https://i.ytimg.com/vi/g5A9VekZDSM/hqdefault.jpg",
     "views": 0,
-    "likes": 0,
-    "comments": 0
-  },
-  {
-    "id": "yt-SNQ3uOzmYt0",
-    "platform": "YouTube",
-    "title": "Why Most Bitcoin Mining Setups Lose Money Today",
-    "url": "https://www.youtube.com/watch?v=SNQ3uOzmYt0",
-    "date": "2026-10-23T17:00:10Z",
-    "thumbnail": "https://i.ytimg.com/vi/SNQ3uOzmYt0/hqdefault.jpg",
-    "views": 8,
-    "likes": 0,
-    "comments": 0
+    "likes": 0
   }
 ]
