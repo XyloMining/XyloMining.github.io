@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T12:40:53.170Z",
+  "updated": "2026-10-27T20:08:24.818Z",
   "platforms": [
     {
       "platform": "YouTube",
@@ -13,9 +13,17 @@
       "platform": "TikTok",
       "handle": "@xylo_mining",
       "followers": null,
-      "views": null,
-      "likes": null,
-      "videos": null
+      "views": 1276,
+      "likes": 33,
+      "videos": 13
+    },
+    {
+      "platform": "Instagram",
+      "handle": "@xylo_mining",
+      "followers": null,
+      "views": 117,
+      "likes": 0,
+      "videos": 14
     }
   ]
 }

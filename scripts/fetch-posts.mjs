@@ -1,7 +1,8 @@
 // Refreshes posts.json (YouTube + Reddit) and articles.json (Medium) for the site.
-// TikTok is not included: its posts need private API keys that are not available to this job.
+// Instagram and TikTok posts come from data/buffer_posts.json (written by scripts/buffer_to_json.py in the daily Claude update), so they are merged in here and never dropped.
 import { readFileSync, writeFileSync } from "node:fs";
 
+const readJson = (f, fallback) => { try { return JSON.parse(readFileSync(f, "utf8")); } catch { return fallback; } };
 const YT_CHANNEL = "UCXUPLb9x-nzQb-0H3A5WVow";
 const UA = "Mozilla/5.0 (XyloMiningSite)";
 const MEDIUM_FEEDS = ["https://xylomining.medium.com/feed", "https://medium.com/feed/@xylomining"];
@@ -90,14 +91,17 @@ async function medium() {
   throw new Error("Medium feed unavailable");
 }
 
-const readJson = (f, fallback) => { try { return JSON.parse(readFileSync(f, "utf8")); } catch { return fallback; } };
 
 // posts.json
 const results = await Promise.allSettled([youtube(), reddit()]);
 results.forEach((r, i) => r.status === "rejected" && console.warn(["YouTube", "Reddit"][i], r.reason?.message));
-const posts = results
-  .flatMap((r) => (r.status === "fulfilled" ? [...r.value].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3) : []))
-  .sort((a, b) => b.date.localeCompare(a.date));
+const social = (readJson("data/buffer_posts.json", { posts: [] }).posts ?? []).filter((p) => p.url && p.date);
+const keepSocial = (name) => social.filter((p) => p.platform === name).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 12)
+  .map(({ reach, shares, saves, ...p }) => ({ ...p, thumbnail: p.thumbnail ?? undefined }));
+const posts = [
+  ...results.flatMap((r) => (r.status === "fulfilled" ? [...r.value].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3) : [])),
+  ...keepSocial("Instagram"), ...keepSocial("TikTok"),
+].sort((a, b) => b.date.localeCompare(a.date));
 // Keep the previous file if every source failed, so a blocked request never wipes the feed.
 if (posts.length) writeFileSync("posts.json", JSON.stringify(posts, null, 2) + "\n");
 console.log(`posts: ${posts.length}`);
