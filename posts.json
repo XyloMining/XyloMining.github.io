@@ -1,12 +1,22 @@
 [
   {
+    "id": "yt-0SQqeLHgqhA",
+    "platform": "YouTube",
+    "title": "I Built a Bitcoin Mining Website (Free Guides + Calculator) #Shorts #Bitcoin #BitcoinMining",
+    "url": "https://www.youtube.com/watch?v=0SQqeLHgqhA",
+    "date": "2026-10-27T11:00:14+00:00",
+    "thumbnail": "https://i.ytimg.com/vi/0SQqeLHgqhA/hqdefault.jpg",
+    "views": 0,
+    "likes": 0
+  },
+  {
     "id": "yt-JteckbP-lgY",
     "platform": "YouTube",
     "title": "What Is a Nonce in Bitcoin Mining?",
     "url": "https://www.youtube.com/watch?v=JteckbP-lgY",
     "date": "2026-10-26T07:01:36+00:00",
     "thumbnail": "https://i.ytimg.com/vi/JteckbP-lgY/hqdefault.jpg",
-    "views": 1,
+    "views": 2,
     "likes": 0
   },
   {
@@ -17,16 +27,6 @@
     "date": "2026-10-25T00:01:11+00:00",
     "thumbnail": "https://i.ytimg.com/vi/qiqK_-SUT-4/hqdefault.jpg",
     "views": 15,
-    "likes": 0
-  },
-  {
-    "id": "yt-g5A9VekZDSM",
-    "platform": "YouTube",
-    "title": "3 Numbers to Check Before Any Bitcoin Mining Decision",
-    "url": "https://www.youtube.com/watch?v=g5A9VekZDSM",
-    "date": "2026-10-24T00:01:53+00:00",
-    "thumbnail": "https://i.ytimg.com/vi/g5A9VekZDSM/hqdefault.jpg",
-    "views": 0,
     "likes": 0
   }
 ]
