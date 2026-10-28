@@ -1,8 +1,9 @@
 // Builds stats.json (views, likes, followers per platform) for the feed page.
-// YouTube: Data API channel totals when YOUTUBE_API_KEY is set, otherwise the sum of views in posts.json (recent videos only, so it never goes below the last known total).
-// Instagram and TikTok: data/buffer_posts.json (per-post views, likes) from Buffer, written in the daily Claude update. Totals cover posts published through Buffer.
+// YouTube: Data API channel totals when YOUTUBE_API_KEY is set, otherwise the sum of views in postsyt.json (the accumulated YouTube data set, never below the last known total).
+// Instagram and TikTok: postsig.json / poststt.json (per-post views, likes) from Buffer, written in the daily Claude update. Totals cover posts published through Buffer.
+// Reddit and X rows appear once postsrd.json / postsx.json have posts. stats.json merges every per-platform file; the files stay separate.
 // Followers are not available from Buffer: they come from data/followers.json, else the last known value.
-// TikTok falls back to data/tiktok_metrics.json (scripts/tiktok_stats.py) only if the Buffer file is missing.
+// TikTok falls back to data/tiktok_metrics.json (scripts/tiktok_stats.py) only if poststt.json is missing.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const read = (p) => (existsSync(p) ? JSON.parse(readFileSync(p, "utf8")) : null);
@@ -21,15 +22,14 @@ async function youtube() {
       if (s) return { ...old, handle: "@xylomining", followers: Number(s.subscriberCount), views: Number(s.viewCount), likes: null, videos: Number(s.videoCount) };
     } else console.warn("YouTube API", r.status);
   }
-  const yt = (read("posts.json") ?? []).filter((p) => p.platform === "YouTube");
+  const yt = read("postsyt.json") ?? [];
   if (!yt.length) return old;
   return { ...old, handle: "@xylomining", views: Math.max(yt.reduce((s, p) => s + (p.views ?? 0), 0), old.views ?? 0), videos: Math.max(yt.length, old.videos ?? 0) };
 }
 
 function fromBuffer(name, handle) {
   const old = { ...empty(name, handle), ...(prevOf(name) ?? {}), handle };
-  const b = read("data/buffer_posts.json");
-  const mine = (b?.posts ?? []).filter((p) => p.platform === name);
+  const mine = read(name === "Instagram" ? "postsig.json" : "poststt.json") ?? [];
   if (!mine.length) return null;
   const f = read("data/followers.json")?.[name.toLowerCase()];
   return {
@@ -56,8 +56,16 @@ function tiktok() {
   };
 }
 
+function fromFile(name, handle, file) {
+  const mine = read(file) ?? [];
+  if (!mine.length) return null;
+  const old = prevOf(name) ?? {};
+  const sum = (k) => mine.reduce((t, p) => t + (p[k] ?? 0), 0);
+  return { platform: name, handle, followers: old.followers ?? null, views: sum("views") || (old.views ?? null), likes: sum("likes"), videos: mine.length };
+}
+
 const instagram = fromBuffer("Instagram", "@xylo_mining") ?? { ...empty("Instagram", "@xylo_mining"), ...(prevOf("Instagram") ?? {}) };
-const platforms = [await youtube(), tiktok(), instagram];
+const platforms = [await youtube(), tiktok(), instagram, fromFile("Reddit", "u/Xylo_mining", "postsrd.json"), fromFile("X", "@Xylo_mining", "postsx.json")].filter(Boolean);
 const next = { updated: new Date().toISOString(), platforms };
 const same = prev && JSON.stringify(prev.platforms) === JSON.stringify(platforms);
 if (!same) writeFileSync("stats.json", JSON.stringify(next, null, 2) + "\n");

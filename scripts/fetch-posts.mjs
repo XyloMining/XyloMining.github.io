@@ -1,5 +1,6 @@
 // Refreshes posts.json (YouTube + Reddit) and articles.json (Medium) for the site.
-// Instagram and TikTok posts come from data/buffer_posts.json (written by scripts/buffer_to_json.py in the daily Claude update), so they are merged in here and never dropped.
+// One file per platform: postsyt.json, postsrd.json (written here, accumulated), postsig.json, poststt.json (written by scripts/buffer_to_json.py in the daily Claude update) and postsx.json.
+// posts.json is a short combined list kept only for the older site build that reads one file.
 import { readFileSync, writeFileSync } from "node:fs";
 
 const readJson = (f, fallback) => { try { return JSON.parse(readFileSync(f, "utf8")); } catch { return fallback; } };
@@ -95,15 +96,35 @@ async function medium() {
 // posts.json
 const results = await Promise.allSettled([youtube(), reddit()]);
 results.forEach((r, i) => r.status === "rejected" && console.warn(["YouTube", "Reddit"][i], r.reason?.message));
-const social = (readJson("data/buffer_posts.json", { posts: [] }).posts ?? []).filter((p) => p.url && p.date);
-const keepSocial = (name) => social.filter((p) => p.platform === name).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 12)
-  .map(({ reach, shares, saves, ...p }) => ({ ...p, thumbnail: p.thumbnail ?? undefined }));
-const posts = [
-  ...results.flatMap((r) => (r.status === "fulfilled" ? [...r.value].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3) : [])),
-  ...keepSocial("Instagram"), ...keepSocial("TikTok"),
-].sort((a, b) => b.date.localeCompare(a.date));
-// Keep the previous file if every source failed, so a blocked request never wipes the feed.
-if (posts.length) writeFileSync("posts.json", JSON.stringify(posts, null, 2) + "\n");
+const write = (f, rows) => writeFileSync(f, JSON.stringify(rows, null, 2) + "\n");
+const COUNTS = ["views", "likes", "comments"];
+// The per-platform files are a growing data set: posts are matched by id and never removed, and counts never go down.
+function accumulate(file, fresh) {
+  const merged = new Map(readJson(file, []).map((p) => [p.id, p]));
+  for (const f of fresh) {
+    const old = merged.get(f.id) ?? {};
+    const next = { ...old, ...f };
+    for (const k of COUNTS) if (old[k] !== undefined || f[k] !== undefined) next[k] = Math.max(old[k] ?? 0, f[k] ?? 0);
+    merged.set(f.id, next);
+  }
+  const rows = [...merged.values()].sort((a, b) => b.date.localeCompare(a.date));
+  write(file, rows);
+  return rows;
+}
+// A source that failed leaves its file as it was.
+if (results[0].status === "fulfilled") accumulate("postsyt.json", results[0].value);
+if (results[1].status === "fulfilled") accumulate("postsrd.json", results[1].value);
+
+// posts.json is only for the older site build that reads one file: the 5 newest and the top post of each platform.
+const score = (p) => (p.views ?? 0) * 1e6 + (p.likes ?? 0);
+const shown = ["yt", "rd", "ig", "tt", "x"].flatMap((k) => {
+  const all = readJson(`posts${k}.json`, []).sort((a, b) => b.date.localeCompare(a.date));
+  const top = [...all].sort((a, b) => score(b) - score(a))[0];
+  const recent = all.slice(0, 5);
+  return top && !recent.includes(top) ? [...recent, top] : recent;
+});
+const posts = shown.sort((a, b) => b.date.localeCompare(a.date));
+if (posts.length) write("posts.json", posts);
 console.log(`posts: ${posts.length}`);
 if (!posts.length) {
   console.error("No posts fetched from any source. Check the warnings above.");
