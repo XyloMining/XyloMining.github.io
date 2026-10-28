@@ -1,17 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://xylomining.github.io</loc></url>
-  <url><loc>https://xylomining.github.io/socials</loc></url>
-  <url><loc>https://xylomining.github.io/articles</loc></url>
-  <url><loc>https://xylomining.github.io/guides</loc></url>
-  <url><loc>https://xylomining.github.io/calculator</loc></url>
-  <url><loc>https://xylomining.github.io/results</loc></url>
-  <url><loc>https://xylomining.github.io/stats</loc></url>
-  <url><loc>https://xylomining.github.io/referrals</loc></url>
-  <url><loc>https://xylomining.github.io/guides/bitcoin-mining-difficulty-explained</loc></url>
-  <url><loc>https://xylomining.github.io/guides/what-are-gomining-digital-miners</loc></url>
-  <url><loc>https://xylomining.github.io/guides/solo-mining-vs-mining-pools</loc></url>
-  <url><loc>https://xylomining.github.io/guides/understanding-hashrate-and-w-th</loc></url>
-  <url><loc>https://xylomining.github.io/guides/how-mining-maintenance-fees-work</loc></url>
-  <url><loc>https://xylomining.github.io/guides/how-to-calculate-bitcoin-mining-profitability</loc></url>
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://xylomining.github.io/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/articles/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/calculator/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/results/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/stats/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/referrals/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/youtube/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/tiktok/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/instagram/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/reddit/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/socials/x/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/bitcoin-mining-difficulty-explained/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/what-are-gomining-digital-miners/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/solo-mining-vs-mining-pools/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/understanding-hashrate-and-w-th/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/how-mining-maintenance-fees-work/</loc>
+</url>
+<url>
+  <loc>http://xylomining.github.io/guides/how-to-calculate-bitcoin-mining-profitability/</loc>
+</url>
 </urlset>
