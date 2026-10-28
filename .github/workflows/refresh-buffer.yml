@@ -1,10 +1,12 @@
 name: Refresh Instagram and TikTok
 # Pulls Instagram and TikTok posts and their stats from Buffer's API into postsig.json / poststt.json,
 # then rebuilds stats.json. Needs the repository secret BUFFER_API_KEY. Followers come from data/followers.json (Buffer has none).
-# Buffer's numbers lag by about a day, so every 6 hours is plenty. Run it by hand from the Actions tab at any time.
+# Runs once a day at 10:00 Melbourne time (AEDT, UTC+11), 12 hours after the 22:00 posts. GitHub cron is in UTC, so this is 23:00 UTC the day before;
+# when daylight saving ends (4 Apr 2027) it will run at 09:00 local time: change the hour to "0" then to keep 10:00.
+# GitHub can start scheduled runs a few minutes late. Run it by hand from the Actions tab at any time.
 on:
   schedule:
-    - cron: "37 */6 * * *"
+    - cron: "0 23 * * *"
   workflow_dispatch:
   push:
     paths:
