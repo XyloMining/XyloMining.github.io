@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts.json postsyt.json postsrd.json articles.json
+          git add postsyt.json postsrd.json articles.json
           git diff --cached --quiet || (git commit -m "Refresh posts" && git pull --rebase -q && git push)
       - name: Fail the run if no posts could be fetched
         if: steps.fetch.outcome == 'failure'

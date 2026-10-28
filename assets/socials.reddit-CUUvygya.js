@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-Cltr0gcK.js";import{t}from"./PlatformFeed-C0u3YwDE.js";var n=e(),r=()=>(0,n.jsx)(t,{platform:`Reddit`});export{r as component};

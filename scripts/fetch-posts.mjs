@@ -1,6 +1,5 @@
 // Refreshes posts.json (YouTube + Reddit) and articles.json (Medium) for the site.
 // One file per platform: postsyt.json, postsrd.json (written here, accumulated), postsig.json, poststt.json (written by scripts/buffer_to_json.py in the daily Claude update) and postsx.json.
-// posts.json is a short combined list kept only for the older site build that reads one file.
 import { readFileSync, writeFileSync } from "node:fs";
 
 const readJson = (f, fallback) => { try { return JSON.parse(readFileSync(f, "utf8")); } catch { return fallback; } };
@@ -115,16 +114,7 @@ function accumulate(file, fresh) {
 if (results[0].status === "fulfilled") accumulate("postsyt.json", results[0].value);
 if (results[1].status === "fulfilled") accumulate("postsrd.json", results[1].value);
 
-// posts.json is only for the older site build that reads one file: the 5 newest and the top post of each platform.
-const score = (p) => (p.views ?? 0) * 1e6 + (p.likes ?? 0);
-const shown = ["yt", "rd", "ig", "tt", "x"].flatMap((k) => {
-  const all = readJson(`posts${k}.json`, []).sort((a, b) => b.date.localeCompare(a.date));
-  const top = [...all].sort((a, b) => score(b) - score(a))[0];
-  const recent = all.slice(0, 5);
-  return top && !recent.includes(top) ? [...recent, top] : recent;
-});
-const posts = shown.sort((a, b) => b.date.localeCompare(a.date));
-if (posts.length) write("posts.json", posts);
+const posts = ["yt", "rd", "ig", "tt", "x"].flatMap((k) => readJson(`posts${k}.json`, []));
 console.log(`posts: ${posts.length}`);
 if (!posts.length) {
   console.error("No posts fetched from any source. Check the warnings above.");
