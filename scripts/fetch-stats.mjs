@@ -2,7 +2,7 @@
 // YouTube: Data API channel totals when YOUTUBE_API_KEY is set, otherwise the sum of views in postsyt.json (the accumulated YouTube data set, never below the last known total).
 // Instagram and TikTok: postsig.json / poststt.json (per-post views, likes) from Buffer, written in the daily Claude update. Totals cover posts published through Buffer.
 // Reddit and X rows appear once postsrd.json / postsx.json have posts. stats.json merges every per-platform file; the files stay separate.
-// Followers are not available from Buffer: they come from data/followers.json, else the last known value.
+// Followers are not available from Buffer: they come from data/followers.json (also X and Reddit; redditKarma is used as Reddit likes), else the last known value.
 // TikTok falls back to data/tiktok_metrics.json (scripts/tiktok_stats.py) only if poststt.json is missing.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
@@ -58,10 +58,20 @@ function tiktok() {
 
 function fromFile(name, handle, file) {
   const mine = read(file) ?? [];
-  if (!mine.length) return null;
+  const f = read("data/followers.json") ?? {};
+  const followers = typeof f[name.toLowerCase()] === "number" ? f[name.toLowerCase()] : null;
+  const karma = name === "Reddit" && typeof f.redditKarma === "number" ? f.redditKarma : null; // account karma stands in for likes
+  if (!mine.length && followers === null && karma === null) return null;
   const old = prevOf(name) ?? {};
   const sum = (k) => mine.reduce((t, p) => t + (p[k] ?? 0), 0);
-  return { platform: name, handle, followers: old.followers ?? null, views: sum("views") || (old.views ?? null), likes: sum("likes"), videos: mine.length };
+  const keep = (v, o) => (v === null ? (o ?? null) : Math.max(v, o ?? 0)); // counts never go down
+  return {
+    platform: name, handle,
+    followers: followers ?? old.followers ?? null,
+    views: mine.length && sum("views") ? Math.max(sum("views"), old.views ?? 0) : (old.views ?? null),
+    likes: karma ?? (mine.length ? keep(sum("likes"), old.likes) : (old.likes ?? null)),
+    videos: mine.length ? mine.length : (old.videos ?? null),
+  };
 }
 
 const instagram = fromBuffer("Instagram", "@xylo_mining") ?? { ...empty("Instagram", "@xylo_mining"), ...(prevOf("Instagram") ?? {}) };
