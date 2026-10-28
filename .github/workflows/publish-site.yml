@@ -36,19 +36,19 @@ jobs:
         with:
           repository: ${{ inputs.source_repo }}
           ref: ${{ inputs.source_ref }}
-          path: ${{ runner.temp }}/source
+          path: _source
       - uses: oven-sh/setup-bun@v2
       - name: Build the static site
-        working-directory: ${{ runner.temp }}/source
+        working-directory: _source
         run: |
           bun install --frozen-lockfile
           bunx vite build --config vite.pages.config.ts
       - name: Backup, copy and push
         env:
-          BUILD_DIR: ${{ runner.temp }}/source/dist/client
+          BUILD_DIR: ${{ github.workspace }}/_source/dist/client
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
         run: |
-          SHA=$(git -C "${{ runner.temp }}/source" rev-parse --short HEAD)
+          SHA=$(git -C _source rev-parse --short HEAD)
           export SOURCE_LABEL="${{ inputs.source_repo }}@${{ inputs.source_ref }} ($SHA)"
           scripts/publish-from-source.sh | tee "$RUNNER_TEMP/publish.log"
           { echo "### Publish site"; echo; echo "Source: \`$SOURCE_LABEL\`"; echo; echo '```'; cat "$RUNNER_TEMP/publish.log"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
