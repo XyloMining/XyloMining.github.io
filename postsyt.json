@@ -4,29 +4,109 @@
     "platform": "YouTube",
     "title": "I Built a Bitcoin Mining Website (Free Guides + Calculator) #Shorts #Bitcoin #BitcoinMining",
     "url": "https://www.youtube.com/watch?v=0SQqeLHgqhA",
-    "date": "2026-10-27T11:00:14+00:00",
+    "date": "2026-10-27T11:00:14Z",
     "thumbnail": "https://i.ytimg.com/vi/0SQqeLHgqhA/hqdefault.jpg",
-    "views": 0,
-    "likes": 0
+    "views": 3,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-JteckbP-lgY",
     "platform": "YouTube",
     "title": "What Is a Nonce in Bitcoin Mining?",
     "url": "https://www.youtube.com/watch?v=JteckbP-lgY",
-    "date": "2026-10-26T07:01:36+00:00",
+    "date": "2026-10-26T07:01:36Z",
     "thumbnail": "https://i.ytimg.com/vi/JteckbP-lgY/hqdefault.jpg",
-    "views": 2,
-    "likes": 0
+    "views": 3,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "yt-qiqK_-SUT-4",
     "platform": "YouTube",
     "title": "Bitcoin Mining Recap: Blocks, Hashes and Nodes",
     "url": "https://www.youtube.com/watch?v=qiqK_-SUT-4",
-    "date": "2026-10-25T00:01:11+00:00",
+    "date": "2026-10-25T00:01:11Z",
     "thumbnail": "https://i.ytimg.com/vi/qiqK_-SUT-4/hqdefault.jpg",
     "views": 15,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-g5A9VekZDSM",
+    "platform": "YouTube",
+    "title": "3 Numbers to Check Before Any Bitcoin Mining Decision",
+    "url": "https://www.youtube.com/watch?v=g5A9VekZDSM",
+    "date": "2026-10-24T00:01:53Z",
+    "thumbnail": "https://i.ytimg.com/vi/g5A9VekZDSM/hqdefault.jpg",
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-SNQ3uOzmYt0",
+    "platform": "YouTube",
+    "title": "Why Most Bitcoin Mining Setups Lose Money Today",
+    "url": "https://www.youtube.com/watch?v=SNQ3uOzmYt0",
+    "date": "2026-10-23T17:00:10Z",
+    "thumbnail": "https://i.ytimg.com/vi/SNQ3uOzmYt0/hqdefault.jpg",
+    "views": 8,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-zOhX5e2rfpo",
+    "platform": "YouTube",
+    "title": "Only 21 Million Bitcoin Will Ever Exist",
+    "url": "https://www.youtube.com/watch?v=zOhX5e2rfpo",
+    "date": "2026-10-23T07:02:02Z",
+    "thumbnail": "https://i.ytimg.com/vi/zOhX5e2rfpo/hqdefault.jpg",
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-ue2Ut19CVzc",
+    "platform": "YouTube",
+    "title": "What Is a GoMining Digital Miner? Explained",
+    "url": "https://www.youtube.com/watch?v=ue2Ut19CVzc",
+    "date": "2026-10-22T07:02:09Z",
+    "thumbnail": "https://i.ytimg.com/vi/ue2Ut19CVzc/hqdefault.jpg",
+    "views": 9,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-ZuFj2TBofoI",
+    "platform": "YouTube",
+    "title": "Why Watts per Terahash matters more than hashrate #Bitcoin #Tech",
+    "url": "https://www.youtube.com/watch?v=ZuFj2TBofoI",
+    "date": "2026-10-21T07:02:00Z",
+    "thumbnail": "https://i.ytimg.com/vi/ZuFj2TBofoI/hqdefault.jpg",
+    "views": 60,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-HNvNYpp5HNM",
+    "platform": "YouTube",
+    "title": "Myth: More Miners = Faster Bitcoin Blocks?",
+    "url": "https://www.youtube.com/watch?v=HNvNYpp5HNM",
+    "date": "2026-10-20T07:01:47Z",
+    "thumbnail": "https://i.ytimg.com/vi/HNvNYpp5HNM/hqdefault.jpg",
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-tanBxFFCCLY",
+    "platform": "YouTube",
+    "title": "How a Bitcoin Block Actually Gets Mined",
+    "url": "https://www.youtube.com/watch?v=tanBxFFCCLY",
+    "date": "2026-10-19T07:01:20Z",
+    "thumbnail": "https://i.ytimg.com/vi/tanBxFFCCLY/hqdefault.jpg",
+    "views": 6,
+    "likes": 0,
+    "comments": 0
   }
 ]

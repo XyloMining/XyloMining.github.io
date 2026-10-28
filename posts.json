@@ -4,10 +4,11 @@
     "platform": "YouTube",
     "title": "I Built a Bitcoin Mining Website (Free Guides + Calculator) #Shorts #Bitcoin #BitcoinMining",
     "url": "https://www.youtube.com/watch?v=0SQqeLHgqhA",
-    "date": "2026-10-27T11:00:14+00:00",
+    "date": "2026-10-27T11:00:14Z",
     "thumbnail": "https://i.ytimg.com/vi/0SQqeLHgqhA/hqdefault.jpg",
     "views": 3,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "in-6ae037be913aa340c540a1f4",
@@ -42,10 +43,11 @@
     "platform": "YouTube",
     "title": "What Is a Nonce in Bitcoin Mining?",
     "url": "https://www.youtube.com/watch?v=JteckbP-lgY",
-    "date": "2026-10-26T07:01:36+00:00",
+    "date": "2026-10-26T07:01:36Z",
     "thumbnail": "https://i.ytimg.com/vi/JteckbP-lgY/hqdefault.jpg",
-    "views": 2,
-    "likes": 0
+    "views": 3,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "in-6ad92f9965ffc170d009a722",
@@ -108,10 +110,11 @@
     "platform": "YouTube",
     "title": "Bitcoin Mining Recap: Blocks, Hashes and Nodes",
     "url": "https://www.youtube.com/watch?v=qiqK_-SUT-4",
-    "date": "2026-10-25T00:01:11+00:00",
+    "date": "2026-10-25T00:01:11Z",
     "thumbnail": "https://i.ytimg.com/vi/qiqK_-SUT-4/hqdefault.jpg",
     "views": 15,
-    "likes": 0
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "in-6ad92f929756ed1587c9fdea",
@@ -140,6 +143,17 @@
     "shares": 0,
     "saves": 0,
     "reach": 0
+  },
+  {
+    "id": "yt-g5A9VekZDSM",
+    "platform": "YouTube",
+    "title": "3 Numbers to Check Before Any Bitcoin Mining Decision",
+    "url": "https://www.youtube.com/watch?v=g5A9VekZDSM",
+    "date": "2026-10-24T00:01:53Z",
+    "thumbnail": "https://i.ytimg.com/vi/g5A9VekZDSM/hqdefault.jpg",
+    "views": 0,
+    "likes": 0,
+    "comments": 0
   },
   {
     "id": "in-6ad431dfe272c4918faffc70",
@@ -182,5 +196,27 @@
     "shares": 0,
     "saves": 0,
     "reach": 227
+  },
+  {
+    "id": "yt-SNQ3uOzmYt0",
+    "platform": "YouTube",
+    "title": "Why Most Bitcoin Mining Setups Lose Money Today",
+    "url": "https://www.youtube.com/watch?v=SNQ3uOzmYt0",
+    "date": "2026-10-23T17:00:10Z",
+    "thumbnail": "https://i.ytimg.com/vi/SNQ3uOzmYt0/hqdefault.jpg",
+    "views": 8,
+    "likes": 0,
+    "comments": 0
+  },
+  {
+    "id": "yt-ZuFj2TBofoI",
+    "platform": "YouTube",
+    "title": "Why Watts per Terahash matters more than hashrate #Bitcoin #Tech",
+    "url": "https://www.youtube.com/watch?v=ZuFj2TBofoI",
+    "date": "2026-10-21T07:02:00Z",
+    "thumbnail": "https://i.ytimg.com/vi/ZuFj2TBofoI/hqdefault.jpg",
+    "views": 60,
+    "likes": 0,
+    "comments": 0
   }
 ]
