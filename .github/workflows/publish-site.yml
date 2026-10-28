@@ -1,0 +1,54 @@
+name: Publish site
+# Run by hand: Actions > Publish site > Run workflow.
+# Saves the live site as the next backup-N branch, builds the (unpublished) source repo,
+# copies the build over the live site and pushes to main. Data files and sitemap.xml are never overwritten.
+on:
+  workflow_dispatch:
+    inputs:
+      source_repo:
+        description: "Source repo to build"
+        default: "XyloMining/gomining-bitcoin-social-hub"
+        required: true
+      source_ref:
+        description: "Branch, tag or commit to publish"
+        default: "feature/stats-page"
+        required: true
+      dry_run:
+        description: "Dry run: build and show what would change, but save no backup and push nothing"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the live site (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Check out the source repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.source_repo }}
+          ref: ${{ inputs.source_ref }}
+          path: ${{ runner.temp }}/source
+      - uses: oven-sh/setup-bun@v2
+      - name: Build the static site
+        working-directory: ${{ runner.temp }}/source
+        run: |
+          bun install --frozen-lockfile
+          bunx vite build --config vite.pages.config.ts
+      - name: Backup, copy and push
+        env:
+          BUILD_DIR: ${{ runner.temp }}/source/dist/client
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+        run: |
+          SHA=$(git -C "${{ runner.temp }}/source" rev-parse --short HEAD)
+          export SOURCE_LABEL="${{ inputs.source_repo }}@${{ inputs.source_ref }} ($SHA)"
+          scripts/publish-from-source.sh | tee "$RUNNER_TEMP/publish.log"
+          { echo "### Publish site"; echo; echo "Source: \`$SOURCE_LABEL\`"; echo; echo '```'; cat "$RUNNER_TEMP/publish.log"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
