@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T05:56:23.854Z",
+  "updated": "2026-10-28T12:27:47.558Z",
   "platforms": [
     {
       "platform": "YouTube",
@@ -20,7 +20,7 @@
     {
       "platform": "Instagram",
       "handle": "@xylo_mining",
-      "followers": 3,
+      "followers": 4,
       "views": 117,
       "likes": 0,
       "videos": 14
@@ -30,8 +30,9 @@
       "handle": "u/Xylo_mining",
       "followers": 13,
       "views": null,
-      "likes": 2900,
-      "videos": null
+      "likes": null,
+      "videos": null,
+      "karma": 2900
     },
     {
       "platform": "X",
