@@ -1,0 +1,1 @@
+import{i as e}from"./site-CIBcoMaO.js";import{t}from"./PlatformFeed-C3GPmd_9.js";var n=e(),r=()=>(0,n.jsx)(t,{});export{r as component};
