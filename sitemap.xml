@@ -1,60 +1,107 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
-  <loc>http://xylomining.github.io/</loc>
+<loc>https://xylomining.github.io/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>1.0000</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/</loc>
+<loc>https://xylomining.github.io/socials/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.8000</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/articles/</loc>
+<loc>https://xylomining.github.io/guides/gomining-quickstart/</loc>
+<lastmod>2026-10-30T00:00:00+00:00</lastmod>
+<priority>0.8000</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/</loc>
+<loc>https://xylomining.github.io/about/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.8000</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/calculator/</loc>
+<loc>https://xylomining.github.io/socials/youtube/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/results/</loc>
+<loc>https://xylomining.github.io/socials/tiktok/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/stats/</loc>
+<loc>https://xylomining.github.io/socials/instagram/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/referrals/</loc>
+<loc>https://xylomining.github.io/socials/reddit/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/youtube/</loc>
+<loc>https://xylomining.github.io/socials/x/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/tiktok/</loc>
+<loc>https://xylomining.github.io/guides/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/instagram/</loc>
+<loc>https://xylomining.github.io/calculator/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/reddit/</loc>
+<loc>https://xylomining.github.io/guides/what-are-gomining-digital-miners/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/socials/x/</loc>
+<loc>https://xylomining.github.io/guides/understanding-hashrate-and-w-th/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/bitcoin-mining-difficulty-explained/</loc>
+<loc>https://xylomining.github.io/guides/how-mining-maintenance-fees-work/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/what-are-gomining-digital-miners/</loc>
+<loc>https://xylomining.github.io/guides/how-to-calculate-bitcoin-mining-profitability/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/solo-mining-vs-mining-pools/</loc>
+<loc>https://xylomining.github.io/results/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/understanding-hashrate-and-w-th/</loc>
+<loc>https://xylomining.github.io/stats/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/how-mining-maintenance-fees-work/</loc>
+<loc>https://xylomining.github.io/articles/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
 </url>
 <url>
-  <loc>http://xylomining.github.io/guides/how-to-calculate-bitcoin-mining-profitability/</loc>
+<loc>https://xylomining.github.io/referrals/</loc>
+<lastmod>2026-10-31T13:00:58+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://xylomining.github.io/guides/bitcoin-mining-difficulty-explained/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.5120</priority>
+</url>
+<url>
+<loc>https://xylomining.github.io/guides/solo-mining-vs-mining-pools/</loc>
+<lastmod>2026-10-20T00:00:00+00:00</lastmod>
+<priority>0.5120</priority>
 </url>
 </urlset>
