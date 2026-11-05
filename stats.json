@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-04T19:53:21.615Z",
+  "updated": "2026-11-05T03:20:52.350Z",
   "platforms": [
     {
       "platform": "YouTube",
       "handle": "@xylomining",
       "followers": 1,
-      "views": 429,
+      "views": 430,
       "likes": null,
       "videos": 22
     },
@@ -13,17 +13,17 @@
       "platform": "TikTok",
       "handle": "@xylo_mining",
       "followers": 3,
-      "views": 2165,
-      "likes": 48,
-      "videos": 20
+      "views": 2304,
+      "likes": 50,
+      "videos": 21
     },
     {
       "platform": "Instagram",
       "handle": "@xylo_mining",
       "followers": 4,
-      "views": 339,
-      "likes": 0,
-      "videos": 21
+      "views": 391,
+      "likes": 1,
+      "videos": 22
     },
     {
       "platform": "Reddit",
