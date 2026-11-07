@@ -1,12 +1,26 @@
 [
   {
+    "id": "ti-6ae50d8afc1ac02b6ee05674",
+    "platform": "TikTok",
+    "title": "Bitcoin Difficulty Can Jump 300% at Once",
+    "url": "https://www.tiktok.com/@xylo_mining/video/7705012249915657490",
+    "date": "2026-11-06T11:00:00.000Z",
+    "thumbnail": "https://images.buffer.com/thumbnail/JXh-i-eKT0W65Vgjj7oq55heWbyvZ8fcvHShJUd2Xus?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-06_1800_20.mp4",
+    "views": 27,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "reach": 0
+  },
+  {
     "id": "ti-6ae50d88fc1ac02b6ee05582",
     "platform": "TikTok",
     "title": "Why GoMining Results Vary (and Can Be Negative)",
-    "url": "https://tiktok.com/@xylo_mining/video/7704641214401744146",
+    "url": "https://www.tiktok.com/@xylo_mining/video/7704641214401744146",
     "date": "2026-11-05T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/xc_EuJDXIeo7Vojw3X2i0v5TZphzYwknhVn51FpduWk?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-05_1800_19.mp4",
-    "views": 13,
+    "views": 48,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -17,7 +31,7 @@
     "id": "ti-6ae50d67406ab8a01883a599",
     "platform": "TikTok",
     "title": "What Does 1 TH/s Actually Mean?",
-    "url": "https://tiktok.com/@xylo_mining/video/7704270166355430657",
+    "url": "https://www.tiktok.com/@xylo_mining/video/7704270166355430657",
     "date": "2026-11-04T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/pHpWRjjho-BjAMUJ_Q5OxzLrOjp6P0Vrnm9hzMxgL10?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-04_1800_18.mp4",
     "views": 83,
@@ -25,13 +39,13 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 0
+    "reach": 44
   },
   {
     "id": "ti-6ae50d65a1145743496e5419",
     "platform": "TikTok",
     "title": "Myth: Bitcoin Mining Rewards Are Steady Income",
-    "url": "https://tiktok.com/@xylo_mining/video/7703898521879006470",
+    "url": "https://www.tiktok.com/@xylo_mining/video/7703898521879006470",
     "date": "2026-11-03T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/IXlgy4TZmUlF3DeazEqLWQRDYRJ_PhQDeVIsf9hLc8M?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-03_1800_17.mp4",
     "views": 99,
@@ -39,7 +53,7 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 51
+    "reach": 86
   },
   {
     "id": "ti-6ae50d63a1145743496e5393",
@@ -53,7 +67,7 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 66
+    "reach": 68
   },
   {
     "id": "ti-6ae50d46406ab8a018839f78",
@@ -67,7 +81,7 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 185
+    "reach": 186
   },
   {
     "id": "ti-6ad92fb89756ed1587ca02e5",
@@ -109,7 +123,7 @@
     "comments": 1,
     "shares": 0,
     "saves": 0,
-    "reach": 116
+    "reach": 136
   },
   {
     "id": "ti-6ad92fa49756ed1587ca0089",
@@ -132,12 +146,12 @@
     "url": "https://www.tiktok.com/@xylo_mining/video/7701301032780893458",
     "date": "2026-10-27T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/GnPbB5ESiC6BV7sV6sYUhWoCC2Iedc_4g6ef2MJbYhQ?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fpromo%2Fout%2Fwebsite-promo-v2%2Fvideo.mp4",
-    "views": 280,
+    "views": 286,
     "likes": 8,
     "comments": 2,
     "shares": 0,
     "saves": 0,
-    "reach": 256
+    "reach": 258
   },
   {
     "id": "ti-6ad92f9765ffc170d009a6f1",
@@ -202,7 +216,7 @@
     "url": "https://www.tiktok.com/@xylo_mining/video/7699921567681219860",
     "date": "2026-10-23T17:48:22.000Z",
     "thumbnail": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/6ad38249b692c4ab06ad53ec/6ad3833b778b240e2f3a0347/6ade3ab93ab63a340560778b_thumbnail.webp",
-    "views": 353,
+    "views": 354,
     "likes": 12,
     "comments": 0,
     "shares": 1,
@@ -230,7 +244,7 @@
     "url": "https://www.tiktok.com/@xylo_mining/video/7699383824853110034",
     "date": "2026-10-22T07:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/yJ6uKO7WOcdtAvl7GAJ1NhooSa3Kr2rKPl7zQtU2uxY?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-10-22_1800_5.mp4",
-    "views": 128,
+    "views": 130,
     "likes": 4,
     "comments": 0,
     "shares": 0,
