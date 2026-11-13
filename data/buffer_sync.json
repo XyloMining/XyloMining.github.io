@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "fetched": 57,
-  "kept": 55,
+  "fetched": 61,
+  "kept": 59,
   "thumbnails": true,
   "instagram": {
-    "posts": 28,
-    "views": 830
+    "posts": 30,
+    "views": 850
   },
   "tiktok": {
-    "posts": 27,
-    "views": 2853
+    "posts": 29,
+    "views": 2864
   },
-  "ranAt": "2026-11-12T03:41:42+00:00"
+  "ranAt": "2026-11-13T03:19:36+00:00"
 }
