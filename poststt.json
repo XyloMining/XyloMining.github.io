@@ -1,13 +1,27 @@
 [
   {
+    "id": "ti-6af9a0d6c5b364e0625375a8",
+    "platform": "TikTok",
+    "title": "Myth: Miners Spend Block Rewards Instantly",
+    "url": "https://tiktok.com/@xylo_mining/video/7711692128086215942",
+    "date": "2026-11-24T11:00:00.000Z",
+    "thumbnail": "https://images.buffer.com/thumbnail/uDI6fRYKp_6uyO4kSJ_XlRd17YHsr8yiKTkMs-kywvg?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-24_2200_37.mp4",
+    "views": 68,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "reach": 0
+  },
+  {
     "id": "ti-6af9a0d4b9a106584ca78e89",
     "platform": "TikTok",
     "title": "What Is Inside a Bitcoin Block Header?",
     "url": "https://www.tiktok.com/@xylo_mining/video/7711320999727205640",
     "date": "2026-11-23T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/ezaaBA3QuGcbpephyicNd23F1a2QqY47eYjrb1xeDbU?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-23_2200_36.mp4",
-    "views": 76,
-    "likes": 0,
+    "views": 118,
+    "likes": 1,
     "comments": 0,
     "shares": 0,
     "saves": 0,
@@ -39,7 +53,7 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 61
+    "reach": 89
   },
   {
     "id": "ti-6af35faf94964d984f0b2854",
