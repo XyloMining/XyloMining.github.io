@@ -1,12 +1,26 @@
 [
   {
+    "id": "ti-6af9a0d8e86a5789a60af773",
+    "platform": "TikTok",
+    "title": "Bitcoin Block Reward: 50 BTC to 3.125 BTC",
+    "url": "https://tiktok.com/@xylo_mining/video/7712063385340333313",
+    "date": "2026-11-25T11:00:00.000Z",
+    "thumbnail": "https://images.buffer.com/thumbnail/L-PEhamNUb14gV_yo0bJ33oDZwq-Ali0PV-8ZHzrOQg?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-25_2200_38.mp4",
+    "views": 105,
+    "likes": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "reach": 0
+  },
+  {
     "id": "ti-6af9a0d6c5b364e0625375a8",
     "platform": "TikTok",
     "title": "Myth: Miners Spend Block Rewards Instantly",
     "url": "https://tiktok.com/@xylo_mining/video/7711692128086215942",
     "date": "2026-11-24T11:00:00.000Z",
     "thumbnail": "https://images.buffer.com/thumbnail/uDI6fRYKp_6uyO4kSJ_XlRd17YHsr8yiKTkMs-kywvg?url=https%3A%2F%2Fraw.githubusercontent.com%2FXyloMining%2Fxylomining-shorts-media%2Fmain%2Fvideos%2F2026-11-24_2200_37.mp4",
-    "views": 68,
+    "views": 136,
     "likes": 0,
     "comments": 0,
     "shares": 0,
@@ -25,7 +39,7 @@
     "comments": 0,
     "shares": 0,
     "saves": 0,
-    "reach": 0
+    "reach": 75
   },
   {
     "id": "ti-6af7fe9c4b28296eb13c1910",
